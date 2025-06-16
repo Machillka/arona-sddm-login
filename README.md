@@ -34,7 +34,7 @@ bash install.sh
 
 Can simply be installed from the store
 
-![installation](../installation.png)
+![installation](installation.png)
 
 Searching Keywords `arona`
 
