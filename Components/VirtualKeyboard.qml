@@ -22,12 +22,33 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
-import QtQuick.VirtualKeyboard 2.3
+import QtQuick 2.15
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+// import QtQuick.VirtualKeyboard 2.3
 
-InputPanel {
+// InputPanel {
+//     id: virtualKeyboard
+//     property bool activated: false
+//     active: activated && Qt.inputMethod.visible
+//     visible: active
+// }
+
+PlasmaComponents3.ToolButton {
     id: virtualKeyboard
-    property bool activated: false
-    active: activated && Qt.inputMethod.visible
-    visible: active
+
+    text: i18ndc("arona-sddm-theme", "Button to show/hide virtual keyboard", "Virtual Keyboard")
+    icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+    onClicked: {
+        userListComponent.mainPasswordBox.forceActiveFocus();
+        inputPanel.showHide()
+    }
+    visible: inputPanel.status === Loader.Ready
+
+    Layout.fillHeight: true
+    containmentMask: Item {
+        parent: virtualKeyboard
+        anchors.fill: parent
+        anchors.leftMargin: -footer.anchors.margins
+        anchors.bottomMargin: -footer.anchors.margins
+    }
 }

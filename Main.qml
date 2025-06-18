@@ -22,10 +22,10 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
-import QtQuick.Layouts 1.11
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.4
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import "Components"
 
 // Config: theme.conf
@@ -51,10 +51,8 @@ Pane {
     //palette.buttonText: config.MainColor
     palette.window: config.BackgroundColor
 
-
     font.family: config.Font
-    // font.pointSize: config.FontSize !== "" ? config.FontSize : parseInt(height / 80)
-    //NOTE scale the fontsize
+
     font.pointSize: config.FontSize !== "" ? config.FontSize : parseInt(height / 80)
     focus: true
 
@@ -77,6 +75,17 @@ Pane {
                                config.PartialBlur == "false" &&
                                config.FormPosition == "right" &&
                                config.BackgroundImageHAlignment == "center"
+
+    Rectangle
+    {
+        id: fuck
+        color: red
+        width: 600
+        height: 600
+        Button{
+            icon.source: Qt.resolvedUrl("Assets/Reboot.svgz")
+        }
+    }
 
     Item {
         id: sizeHelper
@@ -104,7 +113,7 @@ Pane {
             opacity: config.PartialBlur == "true" ? 0.3 : 1
             z: 1
         }
-        //FIXME scale the whole mask (the form size)
+
         LoginForm {
             id: form
 

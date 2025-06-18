@@ -22,7 +22,7 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
+import QtQuick 2.15
 import QtQuick.Controls 2.4
 
 //TODO Add the opacity for clock
