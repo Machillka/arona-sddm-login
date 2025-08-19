@@ -13,3 +13,4 @@ ConfigFile=theme.conf
 TranslationsDirectory=translations
 Theme-Id=arona-theme
 Theme-API=2.11
+QtVersion=6
