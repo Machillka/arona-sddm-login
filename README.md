@@ -57,6 +57,13 @@ For Red Hat based：
 sudo dnf install sddm qt5‑qtquickcontrols2 qt5‑qtgraphicaleffects qt5‑qtsvg
 ```
 
+# Addition
+
+Please drop a glance at the other project about `Blue Archive`
+
+- [Splash-Screen](https://github.com/Machillka/arona-splash-theme)
+- [Grub](https://github.com/Machillka/GameDevClub-GRUB-Theme)
+
 # Thanks to
 
 This repo is built up on the [Sugar Candy login](https://github.com/Kangie/sddm-sugar-candy)
