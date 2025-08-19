@@ -63,7 +63,7 @@ sudo dnf install sddm qt5‑qtgraphicaleffects qt5‑qtquickcontrols2 qt5‑qtsv
 请老师们看看其他有关`Blue Archive`的项目
 
 - [Splash-Screen](https://github.com/Machillka/arona-splash-theme)
-- [Grub](https://github.com/Machillka/GameDevClub-GRUB-Theme)=
+- [Grub](https://github.com/Machillka/GameDevClub-GRUB-Theme)
 
 # 特别鸣谢
 
