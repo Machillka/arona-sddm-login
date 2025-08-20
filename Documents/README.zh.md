@@ -58,6 +58,13 @@ sudo apt install --no-install-recommends sddm qml‑module‑qtquick‑layouts q
 sudo dnf install sddm qt5‑qtgraphicaleffects qt5‑qtquickcontrols2 qt5‑qtsvg
 ```
 
+## 额外内容
+
+请老师们看看其他有关`Blue Archive`的项目
+
+- [Splash-Screen](https://github.com/Machillka/arona-splash-theme)
+- [Grub](https://github.com/Machillka/GameDevClub-GRUB-Theme)
+
 # 特别鸣谢
 
 [Sugar Candy login](https://github.com/Kangie/sddm-sugar-candy)
