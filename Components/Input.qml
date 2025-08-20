@@ -45,6 +45,7 @@ Column {
 
             id: selectUser
 
+            displayText: ""
             width: parent.height
             height: parent.height
             anchors.left: parent.left
@@ -68,7 +69,6 @@ Column {
                 username.text = currentText
             }
 
-            // make the text adapt to dark mode or white mode
             delegate: ItemDelegate {
                 width: parent.width
                 anchors.horizontalCenter: parent.horizontalCenter
@@ -76,12 +76,10 @@ Column {
                     text: model.name
                     font.pointSize: root.font.pointSize * 0.8
                     font.capitalization: Font.Capitalize
-                    color: selectUser.highlightedIndex === index ? root.palette.highlight.hslLightness >= 0.7 ? "#000" : "white" : root.palette.window.hslLightness >= 0.8 ? root.palette.highlight.hslLightness >= 0.8 ? "#000" : root.palette.highlight : "white"
+                    color: selectUser.highlightedIndex === index ? root.palette.highlight.hslLightness >= 0.7 ? "#444" : "white" : root.palette.window.hslLightness >= 0.8 ? root.palette.highlight.hslLightness >= 0.8 ? "#444" : root.palette.highlight : "white"
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
-
                 }
-                opacity: 0.7
                 highlighted: parent.highlightedIndex === index
                 background: Rectangle {
                     color: selectUser.highlightedIndex === index ? root.palette.highlight : "transparent"
@@ -99,6 +97,7 @@ Column {
                     icon.width: parent.height * 0.25
                     enabled: false
                     icon.color: root.palette.text
+                    flat: true
                     icon.source: Qt.resolvedUrl("../Assets/User.svgz")
             }
 
@@ -454,6 +453,7 @@ Column {
         }
     }
 
+    // Login Button
     Item {
         id: login
         height: root.font.pointSize * 3
@@ -571,8 +571,8 @@ Column {
 
     Connections {
         target: sddm
-        onLoginSucceeded: {}
-        onLoginFailed: {
+        function onLoginSucceeded() {}
+        function onLoginFailed() {
             failed = true
             resetError.running ? resetError.stop() && resetError.start() : resetError.start()
         }
