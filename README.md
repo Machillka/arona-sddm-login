@@ -49,7 +49,7 @@ sudo pacman -S sddm qt5-quickcontrols2 qt5-graphicaleffects qt5-svg
 
 For Debian based:
 ```bash
-sudo apt install --no-install-recommends sddm qml‑module‑qtquick‑layouts qml‑module‑qtgraphicaleffects qml‑module‑qtquick‑controls2 libqt5svg5
+sudo apt install --no-install-recommends sddm qml‑module‑qtquick‑layouts qml6-module-qt5compat-graphicaleffects qml‑module‑qtquick‑controls2 libqt5svg5
 ```
 
 For Red Hat based：
